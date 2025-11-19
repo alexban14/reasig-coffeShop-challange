@@ -23,11 +23,6 @@
     "strictPropertyInitialization": false,
     "esModuleInterop": true,
     "composite": true,
-    "paths": {
-      "@cf/*": [
-        "src/*"
-      ]
-    }
   },
   "exclude": ["dist/"],
 }

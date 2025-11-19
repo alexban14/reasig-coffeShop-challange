@@ -1,11 +1,11 @@
-import server from './src/api';
+import api from './src/api';
 
 const start = async () => {
 	try {
-		await server.listen({ port: 3131 });
-		server.log.info(`server listening on ${server.server.address}`);
+		await api.listen({ port: 3131 });
+		api.log.info(`server listening on ${api.server.address}`);
 	} catch (err) {
-		server.log.error(err);
+		api.log.error(err);
 		process.exit(1);
 	}
 }

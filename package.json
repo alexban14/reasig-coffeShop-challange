@@ -13,9 +13,14 @@
   "license": "ISC",
   "packageManager": "pnpm@10.16.1",
   "dependencies": {
+    "@fastify/env": "^5.0.3",
     "@types/node": "^24.10.1",
+    "@types/papaparse": "^5.5.0",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
     "fastify": "^5.6.2",
     "fastify-cli": "^7.4.1",
+    "papaparse": "^5.5.3",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3"
