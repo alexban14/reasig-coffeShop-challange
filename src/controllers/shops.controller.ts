@@ -6,8 +6,7 @@ import { JsonResponse } from '../shared/types/jsonResponse';
 
 const shops = {
 	async findNearest(payload: FindNearestRequest): Promise<JsonResponse> {
-		// @ts-expect-error
-		const url = fastify.getEnvs()?.COFFEE_SHOPS_CSV_LINK;
+		const url = fastify.config.COFFEE_SHOPS_CSV_LINK;
 		fastify.log.info(url);
 
 		const csvString = await shopsService.fetchCsvContents(url);

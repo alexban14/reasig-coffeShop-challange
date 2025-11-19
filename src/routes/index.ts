@@ -8,7 +8,7 @@ const routes = async (fastify: FastifyInstance) => {
 		url: '/',
 		method: 'GET',
 		handler: async () => {
-			return { hello: 'world' };
+			return { success: true };
 		},
 	}),
 	fastify.post(

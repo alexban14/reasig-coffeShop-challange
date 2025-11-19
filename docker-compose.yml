@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3131:3131"
+    environment:
+      - PORT=3131
+      - COFFEE_SHOPS_CSV_LINK=https://static.reasig.ro/interview/coffee_shops_exerceise/coffee_shops.csv

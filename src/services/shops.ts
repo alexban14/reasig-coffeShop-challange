@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Papa from 'papaparse';
+import * as Papa from 'papaparse';
 import { CsvShopData, FindNearestRequest, FindNearestResponse } from '../shared/types/shops';
 import fastify from '../api';
 

@@ -10,6 +10,6 @@ const fastify = Fastify({
 const fastifyEnvsOptions = { schema: envSchema };
 
 fastify.register(fastifyEnv, fastifyEnvsOptions);
-fastify.register(routes);
+fastify.register(routes, { prefix: '/api/v1' });
 
 export default fastify;
