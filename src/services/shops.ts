@@ -1,16 +1,16 @@
-import axios from 'axios';
 import * as Papa from 'papaparse';
 import { CsvShopData, FindNearestRequest, FindNearestResponse } from '../shared/types/shops';
 import fastify from '../api';
+import remoteUtils from '../shared/utils/remoteService.util';
 
 export const shops = {
 	async fetchCsvContents(url: string): Promise<string>  {
 		try {
-			const res = await axios.get(url, { 
-				responseType: 'arraybuffer',
-			});
+			const res = await remoteUtils.getRemoteFile(url);
 
 			const buffer = Buffer.from(res.data);
+			
+			fastify.log.info("CSV data fetched from URL: " + JSON.stringify(buffer.toString('utf8')));
 
 			return buffer.toString('utf8');
 		} catch (err) {

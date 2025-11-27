@@ -10,6 +10,7 @@ const shops = {
 		fastify.log.info(url);
 
 		const csvString = await shopsService.fetchCsvContents(url);
+		fastify.log.info("CSV String fetched: " + csvString);
 		
 		const parsedCsv = await shopsService.parseCsv(csvString);
 

@@ -1,4 +1,4 @@
-import fastify from '../api';
+import fastify from '../../api';
 import { test, TestContext } from 'node:test';
 
 test('Test health check endpoint', async (t: TestContext) => {
