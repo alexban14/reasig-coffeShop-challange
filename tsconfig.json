@@ -21,13 +21,11 @@
     "noFallthroughCasesInSwitch": true,
     "strict": true,
     "strictPropertyInitialization": false,
-    "esModuleInterop": true,
-    "composite": true,
-    "paths": {
-      "@cf/*": [
-        "src/*"
-      ]
-    }
+    "esModuleInterop": true
   },
+  "files": [
+    "server.ts",
+    "src/shared/types/fastify.d.ts"
+  ],
   "exclude": ["dist/"],
 }
